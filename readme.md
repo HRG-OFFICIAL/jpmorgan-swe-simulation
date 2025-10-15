@@ -1,6 +1,22 @@
 # Midas Core - Financial Transaction Processing System
 
+[![Java](https://img.shields.io/badge/Java-17+-orange.svg)](https://openjdk.java.net/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.5-brightgreen.svg)](https://spring.io/projects/spring-boot)
+[![Kafka](https://img.shields.io/badge/Apache%20Kafka-3.1.4-blue.svg)](https://kafka.apache.org/)
+[![H2 Database](https://img.shields.io/badge/H2%20Database-2.2.224-yellow.svg)](https://www.h2database.com/)
+[![Maven](https://img.shields.io/badge/Maven-3.6+-red.svg)](https://maven.apache.org/)
+
 A comprehensive Spring Boot application that processes financial transactions through Kafka messaging, integrates with external incentive APIs, and provides REST endpoints for balance queries. This project was developed as part of the JPMC Advanced Software Engineering Forage program.
+
+## 🌟 Features
+
+- **Real-time Transaction Processing** via Apache Kafka
+- **RESTful API** for balance queries and user management
+- **Database Integration** with H2 and JPA/Hibernate
+- **External Service Integration** for incentive calculations
+- **Comprehensive Testing** with embedded Kafka
+- **Event-Driven Architecture** for scalable processing
+- **ACID Compliance** for financial data integrity
 
 ## 🏗️ Architecture Overview
 
@@ -274,9 +290,30 @@ This project is part of the JPMC Advanced Software Engineering Forage program.
 - [JPA/Hibernate Documentation](https://spring.io/projects/spring-data-jpa)
 - [Example Implementation](https://github.com/vagabond-systems/forage-midas-complete)
 
+## 🌐 Website & Documentation
+
+- **Repository**: https://github.com/HRG-OFFICIAL/J.P.-Morgan-Software-Engineering-Job-Simulation
+- **Documentation**: Complete API documentation and architecture overview in README
+- **Examples**: Comprehensive test suite demonstrating all features
+- **Deployment**: Docker and production deployment guides included
+
 ## 👥 Team
 
 Developed as part of the JPMC Advanced Software Engineering Forage program, demonstrating enterprise-level software development practices and modern Java/Spring Boot technologies.
+
+## 📊 Repository Stats
+
+- **Language**: Java
+- **Framework**: Spring Boot 3.2.5
+- **Database**: H2 with JPA/Hibernate
+- **Messaging**: Apache Kafka
+- **Testing**: JUnit 5 with Embedded Kafka
+- **Build Tool**: Maven
+- **Java Version**: 17+
+
+## 🏷️ Topics
+
+`java` `spring-boot` `kafka` `microservices` `rest-api` `database` `jpa` `hibernate` `h2` `maven` `junit` `testing` `financial-services` `transaction-processing` `event-driven` `jpmc` `forage-program`
 
 ---
 
