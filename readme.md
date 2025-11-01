@@ -8,17 +8,7 @@
 
 A comprehensive Spring Boot application that processes financial transactions through Kafka messaging, integrates with external incentive APIs, and provides REST endpoints for balance queries. This project was developed as part of the JPMC Advanced Software Engineering Forage program.
 
-## 🌟 Features
-
-- **Real-time Transaction Processing** via Apache Kafka
-- **RESTful API** for balance queries and user management
-- **Database Integration** with H2 and JPA/Hibernate
-- **External Service Integration** for incentive calculations
-- **Comprehensive Testing** with embedded Kafka
-- **Event-Driven Architecture** for scalable processing
-- **ACID Compliance** for financial data integrity
-
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 Midas Core is a microservices-based financial transaction processing system built with Spring Boot that demonstrates modern software engineering practices including:
 
@@ -29,7 +19,7 @@ Midas Core is a microservices-based financial transaction processing system buil
 - **Transaction Management**: ACID-compliant transaction processing
 - **Test-Driven Development**: Comprehensive test suite with embedded Kafka
 
-## 🚀 Key Features
+## Key Features
 
 ### 1. Kafka Message Processing
 - **Real-time Transaction Processing**: Consumes transaction messages from Kafka topics
@@ -52,7 +42,7 @@ Midas Core is a microservices-based financial transaction processing system buil
 - **JSON Serialization**: Automatic JSON response formatting
 - **Error Handling**: Proper HTTP status codes and error responses
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Java 17+**: Modern Java features and performance
 - **Spring Boot 3.2.5**: Application framework and auto-configuration
@@ -63,7 +53,7 @@ Midas Core is a microservices-based financial transaction processing system buil
 - **JUnit 5**: Testing framework
 - **Embedded Kafka**: Testing infrastructure
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -94,7 +84,7 @@ src/
     └── TaskFiveTests.java               # REST API integration test
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Application Properties (`application.yml`)
 ```yaml
@@ -118,7 +108,7 @@ spring:
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Java 17 or higher
@@ -129,8 +119,8 @@ spring:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/HRG-OFFICIAL/J.P.-Morgan-Software-Engineering-Job-Simulation.git
-   cd J.P.-Morgan-Software-Engineering-Job-Simulation
+   git clone https://github.com/HRG-OFFICIAL/jpmorgan-swe-simulation.git
+   cd jpmorgan-swe-simulation
    ```
 
 2. **Build the project**
@@ -148,7 +138,7 @@ spring:
    mvn spring-boot:run
    ```
 
-## 🧪 Testing
+## Testing
 
 The project includes comprehensive test suites that demonstrate different aspects of the system:
 
@@ -171,7 +161,7 @@ mvn test -Dtest=TaskOneTests
 mvn test -Dspring.profiles.active=test
 ```
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Balance Query
 - **Endpoint**: `GET /balance?userId={userId}`
@@ -181,7 +171,7 @@ mvn test -Dspring.profiles.active=test
 - **Response**: JSON object with balance amount
 - **Example**: `GET http://localhost:33400/balance?userId=1`
 
-## 🔄 Transaction Processing Flow
+## Transaction Processing Flow
 
 1. **Message Reception**: Kafka listener receives transaction message
 2. **Validation**: Verify sender/recipient existence and sufficient balance
@@ -190,7 +180,7 @@ mvn test -Dspring.profiles.active=test
 5. **Persistence**: Save changes to database
 6. **Logging**: Record transaction success/failure
 
-## 🏛️ Database Schema
+## Database Schema
 
 ### UserRecord Entity
 - `id`: Primary key
@@ -205,7 +195,7 @@ mvn test -Dspring.profiles.active=test
 - `incentive`: Incentive amount received
 - `timestamp`: Transaction timestamp
 
-## 🔌 External Integrations
+## External Integrations
 
 ### Incentive API
 - **Endpoint**: `POST http://localhost:8080/incentive`
@@ -214,28 +204,28 @@ mvn test -Dspring.profiles.active=test
 - **Response**: Incentive object with amount
 - **Fallback**: Returns 0.0 incentive if service unavailable
 
-## 🚦 Error Handling
+## Error Handling
 
 - **Invalid Transactions**: Gracefully rejected with logging
 - **API Failures**: Fallback to default values
 - **Database Errors**: Transaction rollback on failures
 - **Network Issues**: Retry logic and timeout handling
 
-## 📊 Performance Considerations
+## Performance Considerations
 
 - **Async Processing**: Non-blocking Kafka message processing
 - **Connection Pooling**: Efficient database connection management
 - **Caching**: Spring's built-in caching mechanisms
 - **Batch Processing**: Optimized database operations
 
-## 🔒 Security Features
+## Security Features
 
 - **Input Validation**: Comprehensive parameter validation
 - **SQL Injection Prevention**: JPA/Hibernate ORM protection
 - **Error Information**: Limited error details in responses
 - **Transaction Isolation**: ACID compliance for data integrity
 
-## 🧩 Design Patterns
+## Design Patterns
 
 - **Repository Pattern**: Data access abstraction
 - **Dependency Injection**: Spring's IoC container
@@ -243,14 +233,7 @@ mvn test -Dspring.profiles.active=test
 - **Template Method**: Spring's RestTemplate
 - **Builder Pattern**: Entity construction
 
-## 📈 Monitoring & Logging
-
-- **Structured Logging**: SLF4J with Logback
-- **Transaction Tracking**: Complete audit trail
-- **Performance Metrics**: Built-in Spring Boot Actuator
-- **Health Checks**: Application health monitoring
-
-## 🚀 Deployment
+## Deployment
 
 ### Development
 ```bash
@@ -271,7 +254,7 @@ EXPOSE 33400
 ENTRYPOINT ["java", "-jar", "/app.jar"]
 ```
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -279,42 +262,17 @@ ENTRYPOINT ["java", "-jar", "/app.jar"]
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
 This project is part of the JPMC Advanced Software Engineering Forage program.
 
-## 🔗 References
+## References
 
 - [Spring Boot Documentation](https://spring.io/projects/spring-boot)
 - [Spring Kafka Documentation](https://spring.io/projects/spring-kafka)
 - [JPA/Hibernate Documentation](https://spring.io/projects/spring-data-jpa)
 - [Example Implementation](https://github.com/vagabond-systems/forage-midas-complete)
 
-## 🌐 Website & Documentation
 
-- **Repository**: https://github.com/HRG-OFFICIAL/J.P.-Morgan-Software-Engineering-Job-Simulation
-- **Documentation**: Complete API documentation and architecture overview in README
-- **Examples**: Comprehensive test suite demonstrating all features
-- **Deployment**: Docker and production deployment guides included
-
-## 👥 Team
-
-Developed as part of the JPMC Advanced Software Engineering Forage program, demonstrating enterprise-level software development practices and modern Java/Spring Boot technologies.
-
-## 📊 Repository Stats
-
-- **Language**: Java
-- **Framework**: Spring Boot 3.2.5
-- **Database**: H2 with JPA/Hibernate
-- **Messaging**: Apache Kafka
-- **Testing**: JUnit 5 with Embedded Kafka
-- **Build Tool**: Maven
-- **Java Version**: 17+
-
-## 🏷️ Topics
-
-`java` `spring-boot` `kafka` `microservices` `rest-api` `database` `jpa` `hibernate` `h2` `maven` `junit` `testing` `financial-services` `transaction-processing` `event-driven` `jpmc` `forage-program`
-
----
 
 **Note**: This project is for educational purposes and demonstrates modern software engineering practices including microservices architecture, event-driven design, and comprehensive testing strategies.
